@@ -1,0 +1,6 @@
+print(' Aumento Salarial '.center(100, '='))
+s = float(input('Informe o salário: '))
+ns = s + (s * 0.15)
+print('='*100)
+print(f'Um funcionário que ganhava R${s:.2f}, após os 15% de aumento, passa a receber R${ns:.2f}.')
+print('='*100)

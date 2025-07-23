@@ -1,0 +1,6 @@
+print(' DESCONTÃO 5% '.center(90, '='))
+p = float(input('Informe o preço do produto: R$'))
+pd = p - (p * 0.05)
+print('='*90)
+print(f'O preço deste produto, que custava R${p:.2f}, com 5% de desconto passa a ser R${pd:.2f}')
+print('='*90)
