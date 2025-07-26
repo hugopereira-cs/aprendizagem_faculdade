@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora com JS</title>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body class="container">
+    <form class="form m-2">
+        <label class="form-label">Valor A</label> <input class="form-control" type="number" id="v1">
+        <label class="form-label">Valor B</label> <input class="form-control" type="number" id="v2">
+        <label class="form-label">Operação</label>
+        <select class="form-select" id="oper">
+            <option>Somar</option>
+            <option>Subtrair</option>
+            <option>Multiplicar</option>
+            <option>Dividir</option>
+            <option>Potência</option>
+        </select>
+        <a href="#" class="btn btn-primary m-2" 
+            onclick="executar()">Executar</a>
+    </form>
+    <div class="alert alert-success" id="result">O resultado aparecerá aqui</div>
+</body>
+<script>
+    const executar = () => {
+        const a = eval(document.getElementById("v1").value);
+        const b = eval(document.getElementById("v2").value);
+        let oper = eval(document.getElementById("oper").selectedIndex);
+        let resultado = (oper==0)?somar(a,b):(oper==1)?subtrair(a,b):
+            (oper==2)?multiplicar(a,b):(oper==3)?dividir(a,b):exponencial(a,b);
+        document.getElementById("result").innerHTML = `O resultado da operação é ${resultado}`
+    }
+</script>
+
+</html>
