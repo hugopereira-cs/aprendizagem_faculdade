@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JSON</title>
+</head>
+<body>
+	<button onclick="loadRemoteJson()">Carregar Json</button>
+</body>
+	<script type="text/javascript">
+	
+		function loadRemoteJson(){
+			var url = "https://dummyjson.com/products/1"
+			
+			fetch(url, {
+				method: 'get'
+			})
+			.then(function(response) {
+				response.json().then(function(data){
+					console.log("Product Id: " + data.id);
+					console.log("Product Title: " + data.title);
+					console.log("Product Description: " + data.description);
+					console.log("Product Price: " + data.price);
+					console.log("Product Discount Percentage: " + data.discountPercentage);
+					console.log("Product Rating: " + data.rating);
+					console.log("Product Stock: " + data.stock);
+					console.log("Product Brand: " + data.brand);
+					console.log("Product Category: " + data.category);
+					console.log("Product Thumbnail: " + data.thumbnail);
+					console.log("Product Images: " + data.images);
+				});
+			})
+			.catch(function(err) {
+				console.error('O seguinte erro ocorreu durante a requisição: ' + err);
+			});
+		}
+	</script>
+</html>

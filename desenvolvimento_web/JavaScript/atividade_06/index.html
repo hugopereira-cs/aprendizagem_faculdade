@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos Com o Google Charts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>    
+</head>
+<body class="container">
+    <h1>Gráfico</h1>
+    <form class="form m-2">
+        <label class="form-label">Valor de X</label>
+        <input class="form-control" type="number" id="v1">
+        <a class="btn btn-primary m-2" href="#" onclick="executar()">Executar</a>
+    </form>
+    <div id="chart_div"></div>
+    <div class="alert alert-warning" id="media"></div>
+    <script src="script.js"></script>
+    <script>
+        const executar = () => {
+            const x = eval(document.getElementById("v1").value);
+            addValor(x);
+            google.charts.load('current', {packages:['corechart','line']});
+            google.charts.setOnLoadCallback(drawBasic);
+            document.getElementById("media").innerHTML = `Media:${media()}`;
+        }
+    </script>
+</body>
+</html>
