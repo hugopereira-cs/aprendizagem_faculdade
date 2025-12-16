@@ -58,7 +58,8 @@ int main() {
     // Define o locale para português, permitindo suporte a caracteres acentuados e formatação regional.
     setlocale(LC_ALL, "Portuguese");
 
-    struct Territorio territorios[NUM_TERRITORIOS];
+    struct Territorio *territorios; //mudei
+    territorios = (struct Territorio *) calloc(NUM_TERRITORIOS, sizeof(struct Territorio)); //mudei
     
     inicializarTerritorios(territorios);
 
