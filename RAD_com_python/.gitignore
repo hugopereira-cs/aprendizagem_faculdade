@@ -1,0 +1,64 @@
+# ========================
+# Ambientes virtuais
+# ========================
+.venv/
+venv/
+env/
+ENV/
+
+# ========================
+# Cache e arquivos compilados
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Arquivos de IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# Sistema operacional
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Logs
+# ========================
+*.log
+
+# ========================
+# Variáveis de ambiente
+# ========================
+.env
+.env.*
+
+# ========================
+# Testes / cobertura
+# ========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ========================
+# Build / distribuição
+# ========================
+build/
+dist/
+*.egg-info/
+
+# ========================
+# Jupyter Notebook
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# Outros
+# ========================
+*.sqlite3
+
