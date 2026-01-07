@@ -1,0 +1,3 @@
+A casa é azul.
+O cachorro é marrom.
+O carro é preto.
